@@ -70,7 +70,5 @@ class LoginForm(forms.Form):
                 if usuario is not None:
                     self.usuario = usuario
                     return cleaned_data
-
             raise forms.ValidationError("E-mail ou senha inválidos.")
-
         return cleaned_data

@@ -45,5 +45,3 @@ class LoginView(TemplateView):
 #@login_required(login_url='login')
 #from django.contrib.auth.decorators import login_required
 #Acessar apenas se estiver logado
-
-
