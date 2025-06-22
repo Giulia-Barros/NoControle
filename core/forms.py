@@ -1,4 +1,5 @@
 from django import forms
+from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
@@ -46,3 +47,30 @@ class CadastroForm(forms.ModelForm):
         if commit:
             user.save()
         return user
+
+class LoginForm(forms.Form):
+    email = forms.EmailField(
+        label='Email',
+        widget=forms.EmailInput(attrs={'class': 'form-control rounded-pill', 'placeholder': 'Email'})
+    )
+    senha = forms.CharField(
+        label='Senha',
+        widget=forms.PasswordInput(attrs={'class': 'form-control rounded-pill', 'placeholder': 'Senha'})
+    )
+
+    def clean(self):
+        cleaned_data = super().clean()
+        email = cleaned_data.get('email')
+        senha = cleaned_data.get('senha')
+
+        if email and senha:
+            user = User.objects.filter(email=email).first()
+            if user:
+                usuario = authenticate(username=user.username, password=senha)
+                if usuario is not None:
+                    self.usuario = usuario
+                    return cleaned_data
+
+            raise forms.ValidationError("E-mail ou senha inválidos.")
+
+        return cleaned_data
