@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+</head>
+<body>
+    <div class="main-box">
+        <div class="text-box">
+            <h1 class="logo-text">NO CONTROLE</h1>
+            <h2>Crie sua Conta</h2>
+
+            <form class="mt-3">
+                <input type="text" class="form-control rounded-pill mb-2" placeholder="Nome">
+                <input type="text" class="form-control rounded-pill mb-2" placeholder="Sobrenome">
+                <input type="email" class="form-control rounded-pill mb-2" placeholder="Email">
+                <input type="password" class="form-control rounded-pill mb-2" placeholder="Senha">
+                <input type="password" class="form-control rounded-pill mb-3" placeholder="Confirmação de Senha">
+                <button type="submit" class="btn btn-primary btn-block btn-custom">Cadastre-se</button>
+            </form>
+        </div>
+
+        <div class="image-box">
+            <img src="{% static 'img/controle.png' %}" alt="Controle remoto">
+        </div>
+    </div>
+</body>
+</html>

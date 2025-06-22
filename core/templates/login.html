@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+</head>
+<body>
+    <div class="main-box">
+        <div class="text-box">
+            <h1 class="logo-text">NO CONTROLE</h1>
+            <h2>Olá, <br><strong>Seja Bem-Vindo!</strong></h2>
+
+            <form class="mt-3">
+                <input type="email" class="form-control rounded-pill mb-2" placeholder="Email">
+                <input type="password" class="form-control rounded-pill mb-2" placeholder="Senha">
+                <button type="submit" class="btn btn-primary btn-block btn-custom">Acessar</button>
+            </form>
+
+            <p class="mt-2" style="font-size: 14px;">Ainda não possui conta? <a href="{% url 'cadastro' %}">Cadastre-se</a></p>
+        </div>
+
+        <div class="image-box">
+            <img src="{% static 'img/tarefas.png' %}" alt="Checklist tarefas">
+            <p class="mt-3" style="max-width: 300px;">Assuma o controle da sua rotina e <span style="color:#007bff;">gerencie suas tarefas diárias</span> com facilidade.</p>
+        </div>
+    </div>
+</body>
+</html>

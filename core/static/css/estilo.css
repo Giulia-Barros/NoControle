@@ -85,3 +85,14 @@ body {
         margin: 10px 5px 0 5px;
     }
 }
+
+form input.form-control {
+    border-radius: 30px;
+    padding: 12px 20px;
+    font-size: 14px;
+}
+
+form button {
+    border-radius: 30px;
+    font-weight: bold;
+}
