@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
+import os.path
 from pathlib import Path
 
 from django.conf.global_settings import MEDIA_URL
