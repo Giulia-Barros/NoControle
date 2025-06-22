@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>No Controle</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+</head>
+<body>
+    <div class="main-box">
+        <div class="text-box">
+            <h1>NO CONTROLE</h1>
+            <p>Organize sua rotina com praticidade e<br>fique no controle das suas tarefas.</p>
+            <div class="mt-4">
+                <a href="#" class="btn btn-primary btn-custom">ACESSAR</a>
+                <a href="#" class="btn btn-outline-custom btn-custom">CADASTRE-SE</a>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="{% static 'img/controle.png' %}" alt="Controle remoto">
+        </div>
+    </div>
+</body>
+</html>
