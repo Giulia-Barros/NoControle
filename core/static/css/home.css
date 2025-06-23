@@ -1,58 +1,61 @@
+/* ============ RESET GERAL ============ */
 body {
-    background-color: #1e1e1e;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
 }
 
+/* ============ CONTAINER PRINCIPAL ============ */
 .main-box {
-    background-color: white;
-    border-radius: 10px;
-    padding: 40px 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
-    max-width: 960px;
-    width: 90%;
+    max-width: 900px;
+    width: 95%;
+    padding: 40px 30px;
     box-sizing: border-box;
-    flex-wrap: wrap; /* <-- permite quebrar para baixo */
+    flex-wrap: wrap;
 }
 
+/* ============ TEXTO E BOTÕES ============ */
 .text-box {
     flex: 1 1 300px;
 }
 
 .text-box h1 {
     font-family: 'Arial Black', sans-serif;
-    font-weight: bold;
     color: #007bff;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
 .text-box p {
     color: #007bff;
-    font-size: 1rem;
-    line-height: 1.5;
-    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    font-weight: 600;
 }
 
+/* ============ BOTÕES ============ */
 .btn-custom {
     padding: 10px 25px;
     font-weight: bold;
     border-radius: 25px;
     margin-right: 10px;
-    margin-top: 20px;
 }
 
 .btn-outline-custom {
     border: 2px solid #007bff;
     color: #007bff;
     background-color: white;
+    transition: 0.3s;
 }
 
 .btn-outline-custom:hover {
@@ -60,6 +63,7 @@ body {
     color: white;
 }
 
+/* ============ IMAGEM ============ */
 .image-box {
     flex: 1 1 300px;
     text-align: center;
@@ -70,29 +74,25 @@ body {
     height: auto;
 }
 
+/* ============ RESPONSIVO ============ */
 @media (max-width: 768px) {
     .main-box {
         flex-direction: column;
         text-align: center;
-    }
-
-    .text-box,
-    .image-box {
-        flex: 1 1 100%;
+        padding: 20px;
     }
 
     .btn-custom {
-        margin: 10px 5px 0 5px;
+        margin-top: 15px;
+        margin-right: 0;
+        width: 100%;
     }
-}
 
-form input.form-control {
-    border-radius: 30px;
-    padding: 12px 20px;
-    font-size: 14px;
-}
+    .btn-outline-custom {
+        margin-top: 10px;
+    }
 
-form button {
-    border-radius: 30px;
-    font-weight: bold;
+    .image-box {
+        margin-top: 30px;
+    }
 }

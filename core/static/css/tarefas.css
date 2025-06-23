@@ -1,0 +1,37 @@
+/* ================= Tela de Tarefas ================= */
+
+body {
+    background-color: #d9d9d9;
+}
+
+.container-box {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.logo-text {
+    font-weight: 800;
+    color: #007bff;
+}
+
+.form-inline input {
+    flex: 1;
+}
+
+.nav-tabs .nav-link.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
+.tarefa-concluida {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.icons {
+    cursor: pointer;
+    margin-left: 10px;
+}

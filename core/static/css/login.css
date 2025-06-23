@@ -1,0 +1,104 @@
+/* ============ ESTILO GERAL ============ */
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ============ CONTAINER PRINCIPAL ============ */
+.main-box {
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 30px;
+    max-width: 900px;
+    width: 95%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+/* ============ BOX DE TEXTO E FORMULÁRIO ============ */
+.text-box {
+    flex: 1 1 300px;
+    padding-right: 20px;
+}
+
+.logo-text {
+    color: #007bff;
+    font-weight: 900;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+form input.form-control {
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 14px;
+}
+
+.btn-custom {
+    border-radius: 25px;
+    font-weight: bold;
+    padding: 10px 25px;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+/* ============ BOX DE IMAGEM ============ */
+.image-box {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-box p {
+    font-size: 14px;
+    color: #333;
+}
+
+.image-box span {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* ============ LINKS E MENSAGENS ============ */
+.text-box p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.text-danger {
+    color: #dc3545;
+    font-size: 14px;
+}
+
+/* ============ RESPONSIVIDADE ============ */
+@media (max-width: 768px) {
+    .main-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .text-box {
+        padding: 0;
+    }
+}
