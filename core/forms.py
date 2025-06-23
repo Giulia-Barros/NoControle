@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from .models import Tarefa
 
+#Formulário de cadastro de novos usuários
 class CadastroForm(forms.ModelForm):
     senha = forms.CharField(
         label="Senha",
@@ -22,7 +23,7 @@ class CadastroForm(forms.ModelForm):
             'last_name': 'Sobrenome',
             'email': 'Email',
         }
-        widgets = {
+        widgets = { #Aplica as classes CSS e placerholders
             'first_name': forms.TextInput(attrs={'class': 'form-control rounded-pill', 'placeholder': 'Nome'}),
             'last_name': forms.TextInput(attrs={'class': 'form-control rounded-pill', 'placeholder': 'Sobrenome'}),
             'email': forms.EmailInput(attrs={'class': 'form-control rounded-pill', 'placeholder': 'Email'}),
@@ -49,6 +50,7 @@ class CadastroForm(forms.ModelForm):
             user.save()
         return user
 
+#Formulário de login do usuário
 class LoginForm(forms.Form):
     email = forms.EmailField(
         label='Email',
@@ -74,6 +76,7 @@ class LoginForm(forms.Form):
             raise forms.ValidationError("E-mail ou senha inválidos.")
         return cleaned_data
 
+#Fomulário para criar ou editar uma tarefa
 class TarefaForm(forms.ModelForm):
     class Meta:
         model = Tarefa
