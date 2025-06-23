@@ -1,4 +1,4 @@
-/* ============ RESET GERAL ============ */
+/* ============ ESTILO GERAL ============ */
 body {
     background-color: #ffffff;
     margin: 0;
@@ -43,7 +43,6 @@ body {
     font-weight: 600;
 }
 
-/* ============ BOTÕES ============ */
 .btn-custom {
     padding: 10px 25px;
     font-weight: bold;
@@ -74,7 +73,7 @@ body {
     height: auto;
 }
 
-/* ============ RESPONSIVO ============ */
+/* ============ RESPONSIVIDADE ============ */
 @media (max-width: 768px) {
     .main-box {
         flex-direction: column;
