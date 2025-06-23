@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
+from .models import Tarefa
 
 class CadastroForm(forms.ModelForm):
     senha = forms.CharField(
@@ -72,3 +73,14 @@ class LoginForm(forms.Form):
                     return cleaned_data
             raise forms.ValidationError("E-mail ou senha inválidos.")
         return cleaned_data
+
+class TarefaForm(forms.ModelForm):
+    class Meta:
+        model = Tarefa
+        fields = ['descricao']
+        widgets = {
+            'descricao': forms.TextInput(attrs={
+                'class': 'form-control rounded-pill',
+                'placeholder': 'Digite a nova tarefa'
+            })
+        }

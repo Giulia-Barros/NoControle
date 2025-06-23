@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>TarefasTodas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+    <style>
+        body {
+            background-color: #d9d9d9;
+        }
+        .container-box {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 600px;
+            margin: 50px auto;
+        }
+        .logo-text {
+            font-weight: 800;
+            color: #007bff;
+        }
+        .form-inline input {
+            flex: 1;
+        }
+        .nav-tabs .nav-link.active {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+        }
+        .tarefa-concluida {
+            text-decoration: line-through;
+            color: #aaa;
+        }
+        .icons {
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3 class="logo-text mt-4">NO CONTROLE</h3>
+
+        <div class="container-box">
+            <form method="post" action="{% url 'criar_tarefa' %}" class="form-inline mb-3">
+                {% csrf_token %}
+                {{ form.descricao }}
+                <button class="btn btn-primary ml-2">Cadastrar</button>
+            </form>
+
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link {% if filtro == 'todas' %}active{% endif %}" href="?filtro=todas">Todas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if filtro == 'pendentes' %}active{% endif %}" href="?filtro=pendentes">Pendentes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if filtro == 'concluidas' %}active{% endif %}" href="?filtro=concluidas">Concluídas</a>
+                </li>
+            </ul>
+
+            <ul class="list-group mt-3">
+                {% for tarefa in tarefas %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                            <form method="post" action="{% url 'alternar_tarefa' tarefa.id %}" class="mr-2">
+                                {% csrf_token %}
+                                <input type="checkbox" onChange="this.form.submit()" {% if tarefa.concluida %}checked{% endif %}>
+                            </form>
+                            <span class="{% if tarefa.concluida %}tarefa-concluida{% endif %}">{{ tarefa.descricao }}</span>
+                        </div>
+                        <div>
+                            <a href="{% url 'editar_tarefa' tarefa.id %}" class="text-info icons">✏️</a>
+                            <a href="{% url 'deletar_tarefa' tarefa.id %}" class="text-danger icons">🗑️</a>
+                        </div>
+                    </li>
+                {% empty %}
+                    <li class="list-group-item text-center">Nenhuma tarefa encontrada.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

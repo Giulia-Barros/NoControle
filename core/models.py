@@ -1,11 +1,12 @@
 from doctest import master
 from django.db import models
-from stdimage.models import StdImageField
+from django.contrib.auth.models import User
 
-# class Base(models.Model):
-#     criado = models.DateField('Criação', auto_now_add=True)
-#     modificado = models.DateField('Atualização', auto_now=True)
-#     ativo = models.BooleanField('Aitvo', default=True)
-#
-#     class Meta:
-#         abstract = True
+class Tarefa(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    descricao = models.CharField(max_length=255)
+    concluida = models.BooleanField(default=False)
+    criada = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.descricao
