@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'nocontrole.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'nocontrole',
-        'USER': 'giulia',
-        'PASSWORD': '@Dev#0410',
+        'NAME': 'no_controle',
+        'USER': 'root',
+        'PASSWORD': 'sua_senha',
         'HOST': 'localhost',
-        'PORT': '3306'
+        'PORT': '3306',
     }
 }
 
