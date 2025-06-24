@@ -35,3 +35,9 @@ body {
     cursor: pointer;
     margin-left: 10px;
 }
+
+.btn-outline-danger {
+    font-weight: bold;
+    padding: 6px 15px;
+    border-radius: 20px;
+}
