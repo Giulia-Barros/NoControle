@@ -13,7 +13,6 @@ O projeto **No Controle** é uma aplicação web desenvolvida com Django, para o
 - Criação, edição e exclusão de tarefas
 - Marcar tarefas como concluídas
 - Filtro de tarefas por status (todas, pendentes, concluídas)
-- Interface moderna com design responsivo
 
 ---
 
