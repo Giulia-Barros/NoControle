@@ -25,7 +25,6 @@ body {
     box-sizing: border-box;
     flex-wrap: wrap;
 }
-
 /* ============ BOX DE TEXTO E FORMULÁRIO ============ */
 .text-box {
     flex: 1 1 300px;
@@ -65,7 +64,7 @@ form input.form-control {
 }
 
 .image-box img {
-    max-width: 100%;
+    max-width: 60%;
     height: auto;
 }
 
