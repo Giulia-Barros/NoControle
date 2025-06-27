@@ -18,8 +18,8 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 40px 30px;
-    max-width: 900px;
+    padding: 8px 16px;
+    max-width: 300px;
     width: 95%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
@@ -48,30 +48,23 @@ h2 {
     margin-bottom: 15px;
 }
 
+
 input.form-control {
     border-radius: 25px;
-    padding: 12px 20px;
-    font-size: 14px;
+    padding: 8px 16px;
+    font-size: 13px;
+    max-width: 300px;
+    width: 100%;
 }
 
 .btn-custom {
     border-radius: 25px;
+    padding: 8px 16px;
     font-weight: bold;
-    padding: 10px 25px;
-    font-size: 16px;
+    font-size: 13px;
+    max-width: 300px;
+    width: 100%;
 }
-
-/* ============ BOX DE IMAGEM ============ */
-.image-box {
-    flex: 1 1 300px;
-    text-align: center;
-}
-
-.image-box img {
-    max-width: 100%;
-    height: auto;
-}
-
 /* ============ RESPONSIVIDADE ============ */
 @media (max-width: 768px) {
     .main-box {
