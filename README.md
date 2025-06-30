@@ -6,6 +6,20 @@ O projeto **No Controle** é uma aplicação web desenvolvida com Django, para o
 
 **Giulia Barros**
 
+## 🖥️ Interfaces
+
+### Home
+<img src="assets/home.png" alt="Home" width="400"/>
+
+### Login
+<img src="assets/login.png" alt="Login" width="400"/>
+
+### Cadastro
+<img src="assets/cadastro.png" alt="Login" width="300"/>
+
+### Tarefas
+<img src="assets/tarefas.png" alt="Login" width="400"/>
+
 ## 🎮 Funcionalidades
 
 - Cadastro e login de usuários
@@ -76,6 +90,11 @@ O projeto **No Controle** é uma aplicação web desenvolvida com Django, para o
 
 ```arduino
 Nocontrole
+├── assets/
+│     ├── cadastro.png
+│     ├── home.png
+│     ├── loign.png
+│     └── tarefas.png
 ├── core/
 │    ├── static/
 │    │   ├── css/
